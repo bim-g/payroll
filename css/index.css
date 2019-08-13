@@ -1,0 +1,68 @@
+.w3-bar .w3-btn{
+    transition: .5s;
+}
+.w3-bar .w3-btn:first-child{
+    border-left:1px solid #dddddd;
+}
+.w3-bar .w3-btn:not(:first-child){
+    border-left:1px solid #dddddd;
+}
+.w3-bar .w3-btn:last-child{
+    border-right:1px solid #dddddd;
+}
+
+.w3-bar .w3-btn:hover{
+    background:#000;
+}
+
+.w3-bar .w3-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* carret section */
+.boxCarret {
+    width: 600px;
+    /* display: block;
+    flex: row;
+    justify-content: center; */
+}
+
+.carret{
+    width: 250px;
+    height: 250px;
+    border:solid 1x #ddd;
+    text-align: center;
+    margin:15px;
+}
+
+.rearch{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: space-between;
+    width:600px; 
+}
+.rearch input[type="search"],
+.rearch input[type="number"],
+.rearch input[type="text"]{
+    padding:8px;
+    display:block;
+    border:none;
+    width:100%; 
+    text-align: center;
+    color:#969696;
+}
+.rearch button{
+    border:none;
+    background: #fff;
+    color:#000;
+    cursor:pointer;
+}
+.centerObject{
+    width:600px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%)
+}

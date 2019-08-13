@@ -1,0 +1,28 @@
+<div class="w3-yellow w3-center">
+        <a href="#" class="w3-border w3-padding  w3-round-xxlarge w3-hover-black w3-left"><i class="w3-xlarge fa fa-angle-left"></i></a>
+        <h2>Students Register</h2>
+    </div>
+<table class="w3-table w3-striped w3-bordered w3-hoverable w3-margin w3-card-4 centerObject">
+    <tr>
+        <th>Roll Number</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Sexe</th>
+        <th>email</th>
+        <th>telephone</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>       
+    <tr ng-repeat="std in students">
+        <td>{{std.rollNumber}}</td>
+        <td>{{std.Fname}}</td>
+        <td>{{std.Lname}}</td>
+        <td>{{std.Sexe}}</td>
+        <td>{{std.email}}</td>
+        <td>{{std.phone}}</td>
+        <td style="width: 80px;"><i class="w3-xlarge w3-text-green fa fa-pencil-square"></i></td>
+        <td style="width: 80px;"><i class="w3-xlarge w3-text-red fa fa-user-times"></i></td>
+        <td><i class="w3-xlarge w3-text-blue fa fa-info-circle"></i></td>
+    </tr>
+</table>

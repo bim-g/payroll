@@ -1,0 +1,121 @@
+<div class="w3-pink w3-center">
+        <a href="#" class="w3-border w3-padding  w3-round-xxlarge w3-hover-black w3-left"><i class="w3-xlarge fa fa-angle-left"></i></a>
+        <h2>Finance</h2>
+    </div>
+    
+    <div class="w3-container ">
+        <div class="container w3-center">
+            <form ng-submit="searchStudent()" class="w3-margin-bottom" >
+                <div class="w3-row w3-border w3-round-xxlarge rearch" >
+                    <input type="number" placeholder="Enter Roll Number" ng-model="rearch.idstudent">            
+                    <button type="submit" class=" w3-col" style="width: 50px;"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+        <!-- get user information -->
+        <div class="w3-row">
+        <div class="w3-card-4 w3-col s6">
+            <div class="w3-container w3-black w3-center">
+                    <h4>Students Information</h4>
+                </div> 
+            <div class="w3-container">
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i>
+                    </div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" ng-model="stdname" name="fname" type="text" placeholder="First Name & Last Name" disabled>
+                    </div>
+                </div>
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i>
+                    </div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" ng-model="stdphone" name="lname" type="text" placeholder="Phone" disabled>
+                    </div>
+                </div>
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i>
+                    </div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" ng-model="stdemail" name="email" min="0" max="25" type="text" placeholder="Email@mail.com" disabled>
+                    </div>
+                </div>
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-intersex"></i>
+                    </div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" ng-model="stdsexe" name="phone" type="text" placeholder="Sexe"disabled>
+                    </div>
+                </div>
+                <h4>Total Already Payed</h4>
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-line-chart"></i>
+                    </div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" ng-model="finatotalPayed" name="totalPayed" type="text" placeholder="Total" disabled>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    
+    <div class="w3-container w3-col s6">
+        <div class="w3-container w3-black w3-center">
+            <h4>Students payroll</h4>
+        </div>                  
+        <form ng-submit="studentpayed()" class="w3-card-4">
+            <div class="w3-container">
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-university"></i>
+                    </div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" ng-model="finBank" name="fname" type="number"  placeholder="Bank proof">
+                    </div>
+                </div>
+                <hr>
+                <!-- <select class="w3-select" ng-model="finance.bank">
+                    <option value="" disabled selected>Choose your bank associate</option>
+                    <option value="1">Bank 1</option>
+                    <option value="2">Bank 2</option>
+                    <option value="3">Bank 3</option>
+                </select> -->
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-money"></i>
+                    </div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" ng-model="finamount" name="amount"  type="number" placeholder="amount">
+                    </div>
+                </div>                               
+                <hr>
+                <select class="w3-select" ng-model="finTypes">
+                    <option value="" disabled selected>Choose your Designation</option>
+                    <option ng-repeat="fees in typeFees" value="{{fees.id}}" >{{fees.fees_name}}</option>
+                </select>                
+            </div>
+            <div class="w3-margin-top w3-padding-16 w3-light-gray w3-center">
+                <input type="reset" class="w3-btn w3-red w3-margin-right" value="Cansel" style="width:35%;">
+                <input type="submit" class="w3-btn w3-blue " value="Register" style="width:35%;">
+            </div>
+        </form>
+        </div>
+    </div>
+<div ng-if="transact>0" class="w3-center">
+    <div class="w3-yellow ">        
+        <h2>Students transactions</h2>
+    </div>
+    <table class="w3-table w3-striped w3-bordered w3-hoverable w3-margin w3-card-4 " >
+        <tr class="w3-black">
+            <th>Bank Proff</th>
+            <th>Amount</th>
+            <th>Designation</th>
+            <th>Operator</th>
+            <th>date Transaction</th>
+        </tr>       
+        <tr ng-repeat="std in transactions">
+            <td>{{std.bankproof}}</td>
+            <td>{{std.amount}}</td>
+            <td>{{std.feesName}}</td>
+            <td>{{std.userSuport}}</td>
+            <td>{{std.dateTransact}}</td>        
+        </tr>
+    </table>
+</div>

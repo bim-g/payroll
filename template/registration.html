@@ -1,0 +1,57 @@
+<div class="w3-modal" ng-class="{modal: newstudent==true}">
+    <div class="w3-modal-content">
+        <div class="w3-container w3-teal w3-center">
+            <h2>New Student</h2>
+        </div>                  
+        <form ng-submit="newStudent()">
+            <div class="w3-container">
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i>
+                    </div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" ng-model="student.fname" name="fname" type="text" placeholder="First Name" >
+                    </div>
+                </div>
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i>
+                    </div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" ng-model="student.lname" name="lname" type="text" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i>
+                    </div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" ng-model="student.email" name="email" type="email" placeholder="Email@mail.com">
+                    </div>
+                </div>
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i>
+                    </div>
+                    <div class="w3-rest">
+                        <input class="w3-input w3-border" ng-model="student.phone" name="phone" type="text" placeholder="Phone">
+                    </div>
+                </div>
+                <hr>
+                <div class="w3-row w3-section">
+                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-intersex"></i>
+                    </div>
+                    <div class="w3-rest w3-center">
+                        <label  class="w3-large">Male</label> <input class="w3-radio w3-margin-right" ng-model="student.sexe" value="male" type="radio" >
+                        <label  class="w3-large">Female</label> <input class="w3-radio" ng-model="student.sexe" value="female" type="radio" >
+                    </div>
+                </div>
+                <hr>
+                <select class="w3-select" ng-model="student.departerment">
+                    <option value="" disabled selected>Choose your Departement</option>
+                    <option ng-repeat ="dp in departement" value="{{dp.id_dep}}">{{dp.dep_name}}</option>
+                </select>
+            </div>
+            <div class="w3-margin-top w3-padding-16 w3-light-gray w3-center">
+                <input type="reset" class="w3-btn w3-red w3-margin-right" value="Cansel" ng-click="newstudent=false" style="width:35%;">
+                <input type="submit" class="w3-btn w3-blue " value="Register" style="width:35%;">
+            </div>
+        </form>
+    </div>
+</div>

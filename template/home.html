@@ -1,0 +1,20 @@
+<div class="w3-container home " >
+    <div class="centerObject" style="margin-top:50px;">
+        <div class="container w3-center ">
+            <form ng-submit="searchStudent()" class="w3-margin-bottom" >
+                <div class="w3-row w3-border w3-round-xxlarge rearch" >
+                    <input type="search" placeholder="search" ng-model="rearch.keyword">            
+                    <button type="submit" class=" w3-col" style="width: 50px;"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+        <div class="w3-border w3-padding boxCarret">
+            <button class="w3-btn w3-blue carret" ng-click="newstudent=true"><i class="w3-jumbo  fa fa-user-plus"></i></button>
+            <button ng-click="fetchLink('listStudent')"class="w3-btn w3-yellow carret"><i class="w3-jumbo fa fa-graduation-cap"></i></button>
+            <button ng-click="fetchLink('finance')"class="w3-btn w3-pink carret"><i class="w3-jumbo fa fa-briefcase"></i></button>
+            <button ng-click="fetchLink('login')"class="w3-btn w3-teal carret"><i class="w3-jumbo fa fa-cog"></i></button>
+        </div>
+    </div>
+</div>
+<!-- modal registation -->
+<registration></registration>
